@@ -1,12 +1,19 @@
 package model
 
+import "time"
+
 
 type Category struct {
-	Name string
-	SubCategory SubCategory
+	Id string `json:"id,omitempty"`
+	Name string `json:"name"`
+	CreatedAt time.Time `json:"createdAt"`
+	UpdatedAt time.Time `json:"updatedAt"`
 }
 
 type SubCategory struct {
-	Name string
-	Tools []Tool
+	Id string `json:"id,omitempty"`
+	CategoryId string `json:"categoryId"`
+	Name string `json:"name"`
+	CreatedAt time.Time `json:"createdAt"`
+	UpdatedAt time.Time `json:"updatedAt"`
 }
