@@ -8,6 +8,19 @@ import (
 	"golang.org/x/image/font"
 )
 
+type QrCode struct {}
+
+const (
+	QrSmall QrSize = 256
+	QrMedium QrSize = 384
+	QrLarge QrSize = 512
+	LabelPad LabelRatio = 0.17
+
+)
+
+type QrSize int 
+type LabelRatio float64
+
 // Recovery Level
 // Low, Medium, and High
 // Low -- Damaged code less likely to scan -- increases with level
@@ -25,15 +38,3 @@ type QrCanvas struct {
 	Width int
 	BaselineY int
 }
-
-type QrCode struct {}
-
-type QrSize int 
-type LabelRatio float64
-
-const (
-	QrSmall QrSize = 256
-	QrMedium QrSize = 384
-	QrLarge QrSize = 512
-	LabelPad LabelRatio = 0.17
-)
