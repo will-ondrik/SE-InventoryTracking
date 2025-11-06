@@ -14,7 +14,12 @@ func NewTrackingService() *TrackingService {
 }
 
 
-func (s *TrackingService) SetCoords(t model.Tool) {
-
+func (s *TrackingService) SetToolCoords(t *model.Tool) {
+	
 }
 
+
+
+func (s *TrackingService) GetUserCoords(lat, lon string) {
+	
+} 
